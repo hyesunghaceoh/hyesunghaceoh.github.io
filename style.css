@@ -1,62 +1,94 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
-/* Header Section */
-#header-content {
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
     display: flex;
-    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #f8f9fa;
+    width: 250px; /* Fixed width for sidebar */
     padding: 20px;
-    background-color: #f9f9f9;
+    border-right: 1px solid #ddd;
+    position: fixed;
+    height: 100%; /* Full height of the viewport */
+    overflow-y: auto; /* Scrollable if content exceeds the sidebar height */
 }
 
-#headshot {
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
 }
 
-/* Navigation Links */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    background-color: #333;
+.contact-links {
+    list-style-type: none;
+    font-size: 14px;
 }
 
-nav ul li {
-    margin: 0 15px;
+.contact-links li {
+    margin: 10px 0;
 }
 
-nav ul li a {
-    color: white;
+.contact-links a {
     text-decoration: none;
-    font-weight: bold;
+    color: #007BFF;
 }
 
-nav ul li a:hover {
+.contact-links a:hover {
     text-decoration: underline;
 }
 
-/* Section Styles */
-section {
-    margin: 20px;
+/* Main Content */
+.content {
+    margin-left: 250px; /* Offset by the width of the sidebar */
     padding: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    width: calc(100% - 250px); /* Full width minus the sidebar width */
+    overflow-y: auto; /* Scrollable content */
+    height: 100vh; /* Full height of the viewport */
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
+h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
