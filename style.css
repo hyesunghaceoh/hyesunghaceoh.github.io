@@ -11,19 +11,19 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styling */
+/* Header Styling for Top Navigation */
 .top-nav {
     background-color: #f8f9fa;
     border-bottom: 1px solid #ddd;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
 .top-nav h1 {
     font-size: 1.5em;
     margin: 0;
+    margin-right: auto; /* Push the links to the left */
 }
 
 .top-nav nav ul {
@@ -31,10 +31,7 @@ body {
     display: flex;
     gap: 20px;
     margin: 0;
-}
-
-.top-nav nav ul li {
-    display: inline;
+    padding: 0;
 }
 
 .top-nav nav ul li a {
