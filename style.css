@@ -43,12 +43,24 @@ a:hover {
     font-weight: bold;
 }
 
+/* Layout container for sidebar and main content */
+.container {
+    display: flex; /* Enables flexbox for alignment */
+    align-items: flex-start; /* Aligns content at the top */
+    justify-content: flex-start; /* Aligns items horizontally */
+    margin: 0 auto;
+    max-width: 1200px; /* Optional: Adjust for layout width */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 /* Sidebar styling */
 .sidebar {
-    width: 250px;
+    width: 250px; /* Fixed width for sidebar */
     padding: 20px;
     background: #e9ecef;
     border-right: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 .sidebar .profile-image {
@@ -67,6 +79,8 @@ a:hover {
 
 /* Main content styling */
 .content {
-    margin-left: 270px;
+    flex-grow: 1; /* Main content takes the remaining space */
     padding: 20px;
+    margin-left: 20px; /* Space between sidebar and content */
+    box-sizing: border-box;
 }
