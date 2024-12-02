@@ -1,86 +1,76 @@
-/* Import Motiva Sans Regular font */
-@font-face {
-    font-family: 'Motiva Sans';
-    src: url('path-to-your-font-files/MotivaSans-Regular.woff2') format('woff2'),
-         url('path-to-your-font-files/MotivaSans-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Apply Motiva Sans globally */
+/* General body styling */
 body {
-    font-family: 'Motiva Sans', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
 }
 
-/* Remove underlines from all links */
-a {
-    text-decoration: none;
-    color: #0066cc;
-}
-
-/* Add hover effects for links */
-a:hover {
-    text-decoration: underline;
-    color: #004999;
-}
-
-/* Header styles */
+/* Top navigation bar styling */
 .top-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    gap: 20px;
+    justify-content: flex-end; /* Moves links to the right */
+    list-style: none;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 10px 20px;
 }
 
-.top-nav a {
+.top-nav ul li {
+    margin-left: 20px;
+}
+
+.top-nav ul li a {
+    text-decoration: none;
     color: #333;
-    font-weight: bold;
 }
 
-/* Layout container for sidebar and main content */
+/* Container layout */
 .container {
-    display: flex; /* Enables flexbox for alignment */
-    align-items: flex-start; /* Aligns content at the top */
-    justify-content: flex-start; /* Aligns items horizontally */
-    margin: 0 auto;
-    max-width: 1200px; /* Optional: Adjust for layout width */
-    padding: 20px;
-    box-sizing: border-box;
+    display: flex;
+    margin: 20px;
 }
 
 /* Sidebar styling */
 .sidebar {
-    width: 250px; /* Fixed width for sidebar */
+    flex: 0 0 300px; /* Makes the sidebar 300px wide */
     padding: 20px;
-    background: #e9ecef;
-    border-right: 1px solid #ccc;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
+    border-radius: 10px;
 }
 
 .sidebar .profile-image {
-    max-width: 100%;
+    width: 100%;
     border-radius: 50%;
 }
 
-.sidebar ul {
+.sidebar h2 {
+    margin: 20px 0 10px;
+}
+
+.sidebar p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.contact-links {
     list-style: none;
     padding: 0;
 }
 
-.sidebar ul li {
+.contact-links li {
     margin-bottom: 10px;
 }
 
 /* Main content styling */
 .content {
-    flex-grow: 1; /* Main content takes the remaining space */
-    padding: 20px;
-    margin-left: 20px; /* Space between sidebar and content */
-    box-sizing: border-box;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.content h2 {
+    font-size: 1.5em;
+}
+
+.content p {
+    line-height: 1.6;
 }
